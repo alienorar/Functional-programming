@@ -125,4 +125,16 @@ function findCoprimePairs(arr) {
     }
     return result
 }
-// console.log(findCoprimePairs([3, 2, 4, 5, 6, 7])); // Output: [2, 3, 5, 7]
+// console.log(findCoprimePairs([3, 2, 4, 5, 6, 7])); // Output: [2, 3, 5, 7]\\
+
+// Task 88
+// Berilgan raqamlar ro'yxatidagi barcha elementlarni k qadam bosib aylanma tartibda o'ngga suring.
+
+function rotateArray(arr, k) {
+    for (let i = 0; i <= k; i++) {
+        arr.push(arr.shift())
+    }
+    return arr
+}
+
+// console.log(rotateArray([1, 2, 3, 4, 5], 2)); // Output: [4, 5, 1, 2, 3]
