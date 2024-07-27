@@ -138,3 +138,22 @@ function rotateArray(arr, k) {
 }
 
 // console.log(rotateArray([1, 2, 3, 4, 5], 2)); // Output: [4, 5, 1, 2, 3]
+
+
+// TAsk 89
+// Berilgan raqamlar ro'yxatidagi o'rtacha qiymatni toping, 
+// faqat ikkita eng kichik va ikkita eng katta qiymatni hisobga olmasdan.
+
+function trimmedMean(arr) {
+    arr.sort((a, b) => a - b)
+    arr.pop()
+    arr.shift()
+    let sum = 0
+    let count = 0
+    for (const item of arr) {
+        sum += item
+        count++
+    }
+    return sum / count
+}
+// console.log(trimmedMean([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // Output: 5.5
