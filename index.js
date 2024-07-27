@@ -105,12 +105,24 @@ function separateEvenOdd(arr) {
 
 function findCoprimePairs(arr) {
     let result = []
-    let count = 0
+
     for (let i = 0; i < arr.length; i++) {
-        for (let g = 0; g < i; g++) {
-            console.log(arr[i], arr [g]);
+        if (arr[i] < 2) {
+            return false
+        }
+        let count = 0
+        for (let g = 1; g < arr[i]; g++) {
+            if (arr[i] % g === 0) {
+                count++
+
+            };
+
+        }
+        if (count === 1) {
+            result.push(arr[i])
 
         }
     }
+    return result
 }
-console.log(findCoprimePairs([2, 3, 4, 5, 6, 7])); // Output: [2, 3, 5, 7]
+// console.log(findCoprimePairs([3, 2, 4, 5, 6, 7])); // Output: [2, 3, 5, 7]
