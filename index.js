@@ -174,4 +174,16 @@ function findPalindromes(arr) {
     return result
 }
 
-console.log(findPalindromes([121, 123, 202, 345, 454])); // Output: [121, 202, 454]
+// console.log(findPalindromes([121, 123, 202, 345, 454])); // Output: [121, 202, 454]
+
+
+// TAsk 91
+// Berilgan raqamlar ro'yxatidagi hamma elementlar bir xil qiymatga ega ekanligini tekshiring.
+
+function allElementsEqual(arr) {
+    let result = arr.every(item => item == arr[0])
+    return result
+}
+
+// console.log(allElementsEqual([1, 1, 1, 1])); // Output: true
+// console.log(allElementsEqual([1, 2, 1, 1])); // Output: false
