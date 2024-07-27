@@ -204,3 +204,21 @@ function arraysHaveSameElements(arr1, arr2) {
 }
 // console.log(arraysHaveSameElements([1, 2, 3], [3, 2, 1])); // Output: true
 // console.log(arraysHaveSameElements([1, 2, 3], [3, 2, 2])); // Output: false
+
+// Task 93
+// Berilgan raqamlar ro'yxatidagi elementlarning to'plam(duplikat bo'lmasligi) bo'lishini tekshiring.
+
+function isUniqueSet(arr) {
+    let result = 0
+    for (const item of arr) {
+        if (arr.indexOf(item) === arr.lastIndexOf(item)) {
+            result = true
+        }
+        else {
+            result = false
+        }
+    }
+    return result
+}
+// console.log(isUniqueSet([1, 2, 3, 4])); // Output: true
+// console.log(isUniqueSet([1, 2, 3, 3])); // Output: false
