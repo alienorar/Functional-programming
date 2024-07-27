@@ -187,3 +187,20 @@ function allElementsEqual(arr) {
 
 // console.log(allElementsEqual([1, 1, 1, 1])); // Output: true
 // console.log(allElementsEqual([1, 2, 1, 1])); // Output: false
+
+// TAsk 92
+// Berilgan ikkita ro'yxatning bir xil elementlarni o'z ichiga olishini tekshiring, tartibini hisobga olmasdan.
+
+function arraysHaveSameElements(arr1, arr2) {
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr2.includes(arr1[i])) {
+            return true
+        }
+        else {
+            return false
+        }
+
+    }
+}
+// console.log(arraysHaveSameElements([1, 2, 3], [3, 2, 1])); // Output: true
+// console.log(arraysHaveSameElements([1, 2, 3], [3, 2, 2])); // Output: false
