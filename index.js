@@ -157,3 +157,21 @@ function trimmedMean(arr) {
     return sum / count
 }
 // console.log(trimmedMean([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // Output: 5.5
+
+
+// TAsk 90
+// Berilgan raqamlar ro'yxatidagi barcha polindrom sonlarni toping.
+
+function findPalindromes(arr) {
+    let palindrome = 0
+    let result = []
+    for (const item of arr) {
+        palindrome = +item.toString().split("").reverse().join("")
+        if (+item.toString().split(" ") == palindrome) {
+            result.push(item)
+        }
+    }
+    return result
+}
+
+console.log(findPalindromes([121, 123, 202, 345, 454])); // Output: [121, 202, 454]
