@@ -222,3 +222,56 @@ function isUniqueSet(arr) {
 }
 // console.log(isUniqueSet([1, 2, 3, 4])); // Output: true
 // console.log(isUniqueSet([1, 2, 3, 3])); // Output: false
+
+
+// Task 94
+// Berilgan raqamlar ro'yxatida ketma-ket uchta toq yoki juft son bor-yo'qligini tekshiring.
+
+// Task 94
+// Berilgan raqamlar ro'yxatida ketma-ket uchta toq yoki juft son bor-yo'qligini tekshiring.
+
+function hasThreeConsecutiveEvenOrOdd(arr) {
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 == 0 && arr[i + 1] % 2 == 0 && arr[i + 2] % 2 === 0) {
+            count++
+        }
+        else if (arr[i] % 2 !== 0 && arr[i + 1] % 2 !== 0 && arr[i + 2] % 2 !== 0) {
+            count++
+        }
+
+    }
+
+    if (count > 1) {
+        return true
+    }
+    else {
+        return false
+    }
+
+}
+
+
+// console.log(hasThreeConsecutiveEvenOrOdd([1, 2, 3, 4, 5, 6, 7])); // Output: false
+// console.log(hasThreeConsecutiveEvenOrOdd([1, 2, 3, 4, 6, 8, 7])); // Output: true
+
+
+
+
+// TAsk 95
+// Berilgan raqamlar ro'yxatidagi elementlar ketma-ket o'sib yoki kamayib borayotganini tekshiring.
+
+function isMonotonic(arr) {
+    let result = false
+    let sorted_arr = [...arr].sort((a, b) => a - b).join("")
+    let reverse_sorted = [...arr].sort((a, b) => b - a).join("")
+    let new_arr = [...arr].join("")
+    if (new_arr === sorted_arr || new_arr === reverse_sorted) {
+        result = true
+    }
+
+    return result
+}
+console.log(isMonotonic([1, 2, 2, 3])); // Output: true
+console.log(isMonotonic([6, 5, 4, 4])); // Output: true
+console.log(isMonotonic([1, 3, 2])); // Output: false
